@@ -5,7 +5,7 @@ import { WebApiService } from './web-api.service';
 var apiUrl = "http://localhost:3000/";
 
 var httpLink = {
-  getAllClinics: apiUrl + "/api/employee/getAllClinics",
+  getAllClinics: apiUrl + "clinicas",
   deleteClinicById: apiUrl + "/api/employee/deleteClinicById",
   getClinicDetailById: apiUrl + "/api/employee/getClinicDetailById",
   saveClinic: apiUrl + "/api/employee/saveClinic"

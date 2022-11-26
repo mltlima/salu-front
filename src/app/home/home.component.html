@@ -1,1 +1,53 @@
-<p>home works!</p>
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>Manage Clinics</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-success" (click)="addClinic()">
+                <i class='fas fa-plus-circle'></i><span> ADD</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered table-content">
+          <thead>
+            <tr class="center-align">
+              <th>Clinic Name</th>
+              <th>Opening</th>
+              <th>Closing</th>
+              <th>Speciality</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let clinic of clinicsList" class="center-align">
+              <td>{{ clinic.nome }}</td>
+              <td>{{ clinic.atendimento.inicio }}</td>
+              <td>{{ clinic.atendimento.fim }}</td>
+              <td>{{ clinic.especialidade }}</td>
+              <td>{{ clinic.endereco }}</td>
+              <td>{{ clinic.telefone }}</td>
+              <td>{{ clinic.preco }}</td>
+              <td>{{ clinic.status }}</td>
+              <td>
+                <a href="#" [routerLink]="['/view-clinic/', clinic.id]" class="btn"><mat-icon aria-hidden="false" aria-label="view-icon" fontIcon="remove_red_eye"></mat-icon></a>
+                <a href="#" [routerLink]="['/edit-clinic/', clinic.id]" class="btn"><mat-icon aria-hidden="false" aria-label="edit-icon" fontIcon="mode_edit"></mat-icon></a>
+                <button type="button" (click)="deleteClinic(clinic)" class="btn"><mat-icon aria-hidden="false" aria-label="delete-icon" fontIcon="delete"></mat-icon></button>
+              </td>
+            </tr>
+            <tr>
+              <td *ngIf="clinicsList.length == 0" colspan="6">No Clinic Found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

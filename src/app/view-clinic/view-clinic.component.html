@@ -1,1 +1,77 @@
-<p>view-clinic works!</p>
+<div class=”container-xl”>
+    <div class=”table-responsive”>
+      <div class=”table-wrapper”>
+        <div class=”table-title”>
+          <div class=”row”>
+            <div class=”col-sm-6”>
+              <h4><b>View Clinic</b></h4>
+            </div>
+            <div class=”col-sm-6”>
+                <a href="#" routerLink="/Home" class="btn btn-success back"><mat-icon aria-hidden="false" aria-label="icon" fontIcon="arrow_circle_left"></mat-icon>
+                    Back</a>
+            </div>
+          </div>
+        </div>       
+        <table class="table table-striped table-hover table-bordered table-content">
+          <tbody>
+            <tr>
+              <td><label><b>Name</b></label></td>
+              <td><span>{{ clinicDetail.name }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>CNPJ</b></label></td>
+                <td><span>{{ clinicDetail.cnpj }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Especialidade</b></label></td>
+                <td><span>{{ clinicDetail.especialidade }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Telefone</b></label></td>
+                <td><span>{{ clinicDetail.telefone }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>CEP</b></label></td>
+                <td><span>{{ clinicDetail.cep }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Endereco</b></label></td>
+                <td><span>{{ clinicDetail.endereco }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Numero</b></label></td>
+                <td><span>{{ clinicDetail.numero }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Bairro</b></label></td>
+                <td><span>{{ clinicDetail.bairro }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Cidade</b></label></td>
+                <td><span>{{ clinicDetail.cidade }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Estado</b></label></td>
+                <td><span>{{ clinicDetail.estado }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Status</b></label></td>
+                <td><span>{{ clinicDetail.status }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Preco</b></label></td>
+                <td><span>{{ clinicDetail.preco }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Atendimento inicio</b></label></td>
+                <td><span>{{ clinicDetail.atendimento.inicio }}</span></td>
+            </tr>
+            <tr>
+                <td><label><b>Atendimento fim</b></label></td>
+                <td><span>{{ clinicDetail.atendimento.fim }}</span></td>
+            </tr>
+          </tbody>
+        </table>       
+      </div>
+    </div>
+  </div>
